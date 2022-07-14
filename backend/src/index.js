@@ -1,7 +1,5 @@
 const express = require("express")
 const cors = require("cors");
-// const ProductController = require("./controllers/ProductsController");
-// const CartController = require("./controllers/CartController")
 const questionController = require("./controllers/QuestionController");
 const answerController = require("./controllers/AnswersController");
 const { register, login } = require("./controllers/AuthController");
@@ -15,7 +13,7 @@ app.post("/login", login);
 
 app.get("", (req, res) => {
   try {
-    return res.send("Welcome to Bobbi- Brown API");
+    return res.send("Welcome QandA -backend");
   } catch (err) {
     console.log(err);
   }

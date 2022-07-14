@@ -30,10 +30,10 @@ router.get("/question",async(req,res)=>{
         const newQuestion = await question.aggregate([
             {
               $lookup: {
-                from: "answers", //collection to join
-                localField: "_id", //field from input document
+                from: "answers", 
+                localField: "_id", 
                 foreignField: "questionId",
-                as: "allAnswers", //output array field
+                as: "allAnswers", 
               },
             },
           ])
